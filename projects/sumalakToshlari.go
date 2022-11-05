@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 
 func main()  {
@@ -19,13 +21,18 @@ func stones(SumalakTosh int, person int) int {
 	
 	for i := 0; i < person; i++ {
 		for j := 0; j < person; j++ {
-			if add[i] < add[j] {
+			if add[i] > add[j] {
 				add[i], add[j] = add[j], add[i]
 			}
 		}
 	}
-
-	fmt.Println(add)
+	var sum int
+	for i, v := range add {
+		sum += v
+		if SumalakTosh <= sum {
+			return i + 1
+		}
+	}
 
 	return -1
 }

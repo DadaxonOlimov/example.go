@@ -1,17 +1,13 @@
-// package main
+package main
 
-// import (
-// 	"fmt"
-// )
+import (
+	"fmt"
+	"strings"
+)
 
-// func main() {
-// 	arr := [5]int{1, 2, 3, 4, 5}
-//     fmt.Println("The elements of the array are: ")
-  
-//     // using for loop
-//     for i := 0; i < len(arr); i++ {
-//         fmt.Println(arr[i])
-//     }
-	
-	
-// }
+func main()  {
+	var a string
+	fmt.Scan(&a)
+	Split := strings.Split(a ,"")
+	fmt.Println(Split[0])
+}
